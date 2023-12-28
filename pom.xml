@@ -163,4 +163,19 @@
             </build>
         </profile>
     </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <localCheckout>true</localCheckout>
+                    <pushChanges>false</pushChanges>
+                    <mavenExecutorId>forked-path</mavenExecutorId>
+                    <arguments>-Dgpg.passphrase=${gpg.passphrase.value} -Pmaven-central</arguments>
+                    <releaseProfiles>release-sign-artifacts</releaseProfiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

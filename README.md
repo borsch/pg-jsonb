@@ -10,10 +10,10 @@ More on how to use PostgreSQL JSON data types along with this lib you can read o
 
 #### Hibernate CriteriaBuilder API example
 
-In order to use pg-jsonb lib with CriteriaBuilder API it is required to use one from the provided Dialects that could be found at `com.vzornic.pgjson.hibernate.dialect`.
+In order to use pg-jsonb lib with CriteriaBuilder API it is required to use one from the provided Dialects that could be found at `com.github.borsch.pgjson.hibernate.dialect`.
 
 For example:
-`hibernate.dialect=com.vzornic.pgjson.hibernate.dialect.PostgresJsonSQL94Dialect`
+`hibernate.dialect=com.github.borsch.pgjson.hibernate.dialect.PostgresJsonSQL94Dialect`
 
 
 
@@ -67,9 +67,9 @@ Add to your pom.xml
 
 ```
 <dependency>
-    <groupId>com.vzornic.pgjsonb</groupId>
+    <groupId>com.github.borsch.pgjsonb</groupId>
     <artifactId>pgjsonb</artifactId>
-    <version>1.1.0</version>
+    <version>${pgjsonb-version}</version>
 </dependency>
 ```
 
@@ -77,7 +77,7 @@ Add to your pom.xml
 
 In order to run tests, there are few prerequirements needed:
 
-- postgress up on localhost:5432
+- run Docker Desktop/Docker engine (required for [test-containers](https://java.testcontainers.org/))
 - Database `pgjsonb`
 - User test/test with full access to `pgjsonb` database
 - Execute seed.sql from test/resources
@@ -94,10 +94,11 @@ Feel free to enhance this libary and open PR. I'll review PRs as soon as possibl
 ## Authors
 
 * **Vedad Zornic** - *Initial work* - [vzornic](https://github.com/vzornic)
+* **Oleh Kurpiak** - *Migration to Hibernate 6 & Java 17* - [borsch](https://github.com/borsch)
 
-See also the list of [contributors](https://github.com/vzornic/pg-jsonb/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/borsch/pg-jsonb/graphs/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/vzornic/pg-jsonb/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/borsch/pg-jsonb/blob/master/LICENSE) file for details
 

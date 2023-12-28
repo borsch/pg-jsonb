@@ -4,47 +4,44 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.vzornic.pgjsonb</groupId>
+    <groupId>com.github.borsch</groupId>
     <artifactId>pgjsonb</artifactId>
     <version>1.2.0</version>
 
-    <name>${project.groupId}:${project.artifactId}&lt;</name>
+    <name>${project.groupId}:${project.artifactId}</name>
     <description>Easy use of PostgreSQL json data types with Hibernate or JDBC</description>
-    <url>https://github.com/vzornic/pg-jsonb</url>
+    <url>https://github.com/borsch/pg-jsonb</url>
     <packaging>jar</packaging>
-
-    <organization>
-        <name>com.vzornic</name>
-        <url>https://vzornic.com</url>
-    </organization>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/vzornic/pg-jsonb/issues</url>
+        <url>https://github.com/borsch/pg-jsonb/issues</url>
     </issueManagement>
 
     <licenses>
         <license>
             <name>MIT License</name>
-            <url>https://github.com/vzornic/pg-jsonb/blob/master/LICENSE</url>
+            <url>https://github.com/borsch/pg-jsonb/blob/master/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <scm>
-        <url>https://github.com/vzornic/pg-jsonb</url>
-        <connection>
-            scm:git:git://github.com/vzornic/pg-jsonb.git
-        </connection>
-        <developerConnection>
-            scm:git:ssh://git@github.com:vzornic/pg-jsonb.git
-        </developerConnection>
+        <url>https://github.com/borsch/pg-jsonb</url>
+        <connection>scm:git:git://github.com/borsch/pg-jsonb.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:borsch/pg-jsonb.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
     <developers>
         <developer>
             <name>Zornic Vedad</name>
+        </developer>
+        <developer>
+            <name>Oleh Kurpiak</name>
+            <email>oleh.kurpiak@gmail.com</email>
+            <organization>Oleh Kurpiak</organization>
+            <organizationUrl>http://github.com/borsch</organizationUrl>
         </developer>
     </developers>
 
@@ -65,13 +62,11 @@
     </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>5.4.12.Final</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.hsqldb/hsqldb -->
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
@@ -80,19 +75,30 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.9</version>
+            <version>3.14.0</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
         <dependency>
-            <groupId>postgresql</groupId>
+            <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>9.1-901-1.jdbc4</version>
+            <version>42.7.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>1.19.3</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.9</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
